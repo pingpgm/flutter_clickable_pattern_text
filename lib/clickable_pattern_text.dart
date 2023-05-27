@@ -80,7 +80,7 @@ class ClickablePatternText extends StatefulWidget {
     for (var pIndex = 0; pIndex < patterns.length; pIndex++) {
       var clickablePattern = patterns[pIndex];
       if (!clickablePattern.enabled) continue;
-      var regPattern = RegExp(clickablePattern.pattern);
+      var regPattern = RegExp(clickablePattern.pattern, caseSensitive: false);
       for (var ttIndex = 0; ttIndex < typeTexts.length; ttIndex++) {
         var typeText = typeTexts[ttIndex];
         if (typeText.clickable) continue;
